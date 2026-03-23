@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>Karma Restaurant</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Karma Restaurant</title>
 </head>
 
 <body>
+  <div class="wrapper">
+    <header>
+      <img class="logo" src="" alt="logo">
 
-<header>
+      <nav>
+        <button class="nav-button">nav1</button>
+        <button class="nav-button">nav2</button>
+        <button class="nav-button">nav3</button>
+      </nav>
 
-    <nav>
-        <button class="nav-button"></button>
-        <button class="nav-button"></button>
-        <button class="nav-button"></button>
-    </nav>
-
-    <div class="searchbar-area">
+      <div class="searchbar-area">
         <input type="search">
-        <button class="search-button"></button>
-    </div>
+        <button class="search-button">Sök</button>
+      </div>
 
-</header>
+      <button class="hamburgerButton">☰</button>
 
-<section class="topsection"></section>
+      <nav id="mobile-nav">
+        <a href="#">Meny</a>
+        <a href="#">Om oss</a>
+        <a href="#">Boka bord</a>
+      </nav>
+    </header>
 
-<section class="imagesection">
-    <img src="" alt="">
-</section>
+    <section class="topsection"></section>
+    <section class="imagesection"></section>
+    <main></main>
+    <aside></aside>
+    <footer></footer>
+  </div>
 
-<main>
-    <article></article>
-</main>
-
-<aside></aside>
-
-<footer></footer>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
