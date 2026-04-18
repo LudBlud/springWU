@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Karma Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pizzeria Valentino</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="wrapper">
-    <header>
-      <img class="logo" src="" alt="logo">
+    <div class="wrapper">
+        <header>
+            <a href="index2.html" class="logo-link">
+            <img src="img/Logotyp.png" alt="Logotyp">
+            </a>
 
-      <nav>
-        <button class="nav-button">nav1</button>
-        <button class="nav-button">nav2</button>
-        <button class="nav-button">nav3</button>
-      </nav>
+        <nav class="desktop-nav">
+            <button class="nav-button">Boka bord</button>
+            <button class="nav-button">Meny</button>
+            <button class="nav-button">Om oss</button>
+        </nav>
 
-      <div class="searchbar-area">
-        <input type="search">
-        <button class="search-button">Sök</button>
-      </div>
+        <button class="hamburger-button">☰</button>
 
-      <button class="hamburgerButton">☰</button>
-
-      <nav id="mobile-nav">
-        <a href="#">Meny</a>
-        <a href="#">Om oss</a>
-        <a href="#">Boka bord</a>
-      </nav>
+        <nav class="mobil-nav">
+            <button class="mobile-nav-button">Boka bord</button>
+            <button class="mobile-nav-button">Meny</button>
+            <button class="mobile-nav-button">Om oss</button>
+        </nav>
+        <section></section>
+        
     </header>
 
-    <section class="topsection"></section>
-    <section class="imagesection"></section>
-    <main></main>
+    <section class="top-section">
+        <h1>Utsedd till stans bästa pizzeria.</h1>
+        <button>Kontakta oss</button>
+        <button>Beställ nu</button>
+    </section> <!--Tänker att man kan ha typ någon text där det står "Bästa pizzerian"
+                och en knapp där man kan trycka beställ nu-->
+
+
+    <main></main> <!--Tänker att man kan ha typ fake rescensioner som en photoshoppad bild här-->
     <aside></aside>
     <footer></footer>
-  </div>
+    </div>
 
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,418 +1,49 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 20% 15%;
-  grid-template-rows: auto auto 1fr auto;
-  grid-template-areas:
-      'hd hd hd'
-      'tp tp as'
-      'mn mn as'
-      'ft ft ft';
-  min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 20% 15%;
+    grid-template-rows: 1fr 15% 10% 20%;
+    grid-template-areas: 
+     'hd hd hd hd'
+     'tp tp tp as'
+     'mn mn mn as'
+     'ft ft ft ft';
+     min-height: 100vh;
 }
+
 
 /* HEADER */
 
 header {
-  grid-area: hd;
-  background-color: #2980b9;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  height: 65px;
-  gap: 15px;
+    grid-area: hd;
+    background-color: blue;
 }
 
-header .logo {
-  height: 45px;
-  cursor: pointer;
+header .mobile-nav {
+    display: none;
 }
 
-.searchbar-area {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.mobile-nav-button {
+    display: none;
 }
-
-.searchbar-area input {
-  width: 100%;
-  height: 38px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 15px;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-}
-
-.search-button {
-  height: 38px;
-  padding: 0 16px;
-  border-radius: 20px;
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-  font-size: 13px;
-  cursor: pointer;
-  white-space: nowrap;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-}
-
-.search-button:hover {
-  background-color: white;
-  color: #2980b9;
-}
-
-nav {
-  display: flex;
-  gap: 5px;
-}
-
-.nav-button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 14px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-}
-
-.nav-button:hover {
-  background-color: white;
-  color: #2980b9;
-}
-
-.hamburgerButton {
-  display: none;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 26px;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-#mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: #1f6591;
-  position: absolute;
-  top: 65px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  padding: 10px 0;
-}
-
-#mobile-nav.open {
-  display: flex;
-}
-
-#mobile-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  font-size: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  transition: background 0.2s ease;
-}
-
-#mobile-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* TOPSECTION */
 
 .topsection {
-  grid-area: tp;
-  background-color: white;
-  padding: 30px 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  border-bottom: 1px solid #ddd;
+    grid-area: tp;
+    background-color: cadetblue;
 }
 
-.topsection h2 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #222;
-  text-align: center;
-}
-
-.category-buttons {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.category-buttons button {
-  width: 150px;
-  height: 90px;
-  border-radius: 15px;
-  border: 2px solid #ccc;
-  background-color: white;
-  color: #333;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-}
-
-.category-buttons button:hover {
-  background-color: #2980b9;
-  color: white;
-  border-color: #2980b9;
-}
-
-/* MAIN */
 
 main {
-  grid-area: mn;
-  padding: 25px;
-  background-color: white;
+    grid-area mn;
+    background-color: cornflowerblue;
 }
-
-.main-card {
-  background-color: #f2f2f2;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.main-card img {
-  max-width: 50%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.main-content h1 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #222;
-}
-
-.main-content p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.5;
-}
-
-.main-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-
-.left-btn,
-.right-btn {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 2px solid #2980b9;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-}
-
-.left-btn {
-  background-color: #2980b9;
-  color: white;
-}
-
-.left-btn:hover {
-  background-color: white;
-  color: #2980b9;
-}
-
-.right-btn {
-  background-color: white;
-  color: #2980b9;
-}
-
-.right-btn:hover {
-  background-color: #2980b9;
-  color: white;
-}
-
-/* ASIDE */
 
 aside {
-  grid-area: as;
-  background-color: #f2f2f2;
-  border-left: 2px solid #ddd;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    grid-area: as;
+    background-color: mediumblue;
 }
-
-aside h2 {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  color: #333;
-}
-
-.aside-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.aside-item img {
-  height: 40px;
-  border-radius: 5px;
-}
-
-.aside-item h3 {
-  font-size: 13px;
-  color: #333;
-  flex: 1;
-}
-
-.aside-item button {
-  height: 36px;
-  width: 70px;
-  border-radius: 8px;
-  border: 1px solid #2980b9;
-  background-color: #2980b9;
-  color: white;
-  font-size: 11px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.aside-item button:hover {
-  background-color: white;
-  color: #2980b9;
-}
-
-/* FOOTER */
 
 footer {
-  grid-area: ft;
-  background-color: #2980b9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 15px 20px;
-}
-
-.email,
-.telephone {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 14px;
-}
-
-.email img,
-.telephone img {
-  height: 35px;
-}
-
-/* MOBIL */
-
-@media (max-width: 768px) {
-
-  header {
-      flex-wrap: wrap;
-      height: auto;
-      padding: 10px 15px;
-      position: relative;
-  }
-
-  header .logo {
-      height: 35px;
-  }
-
-  nav {
-      display: none;
-  }
-
-  .searchbar-area {
-      display: none;
-  }
-
-  .hamburgerButton {
-      display: block;
-      margin-left: auto;
-  }
-
-  .wrapper {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-          'hd'
-          'tp'
-          'mn'
-          'as'
-          'ft';
-  }
-
-  .topsection {
-      padding: 20px 15px;
-  }
-
-  .category-buttons button {
-      width: 120px;
-      height: 70px;
-      font-size: 13px;
-  }
-
-  main {
-      padding: 15px;
-  }
-
-  .main-card {
-      flex-direction: column;
-  }
-
-  .main-card img {
-      max-width: 100%;
-      width: 100%;
-  }
-
-  aside {
-      border-left: none;
-      border-top: 2px solid #ddd;
-  }
-
-  footer {
-      gap: 25px;
-      flex-wrap: wrap;
-  }
+    grid-area: ft;
+    background-color: indigo;
 }
