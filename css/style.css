@@ -1,49 +1,372 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav, .menu-button, .menu, .nav-button, .mobile-nav-button, .top-section, .top-section button, main h1, main p {
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+
+.nav-button, .mobile-nav-button {
+    background-color: #FDF5E6;
+    color: black;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 12px 28px; 
+    font-size: 1.3rem; 
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .mobile-nav-button:hover {
+    background-color: #cd212a;
+    color: white;
+}
+
+
 .wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 20% 15%;
-    grid-template-rows: 1fr 15% 10% 20%;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+
+    grid-template-rows: min-content auto 1fr auto auto;
     grid-template-areas: 
-     'hd hd hd hd'
-     'tp tp tp as'
-     'mn mn mn as'
-     'ft ft ft ft';
-     min-height: 100vh;
+        "hd" 
+        "tp" 
+        "mn" 
+        "as" 
+        "ft";
 }
 
-
-/* HEADER */
 
 header {
     grid-area: hd;
-    background-color: blue;
+    height: 100px;
+    background-color: #cd212a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; 
+    position: relative;
+    z-index: 100; 
 }
 
-header .mobile-nav {
+header .logo-link img {
+    height: 80px; 
+    width: auto;
+    display: block;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
     display: none;
 }
 
-.mobile-nav-button {
-    display: none;
-}
 
-.topsection {
+.top-section-background {
     grid-area: tp;
-    background-color: cadetblue;
+    background-color: #FDF5E6;
+}
+.top-section { 
+    display: flex;
+    
+    background-color: #008C45; 
+    color: #FDF5E6;
+    padding: 40px 20px; 
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 15px;
+    gap: 10px;
+
+}
+
+.top-section h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.top-section button {
+
+    border-radius: 15px;
+    border: 3px solid #cd212a;
+    padding: 12px 28px; 
+    font-size: 1.3rem; 
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#topsection-order-button {
+    background-color: #e7df10;
+}
+#topsection-call-button {
+    background-color: #FDF5E6;
+}
+
+.top-section button:hover, #topsection-order-button:hover, #topsection-call-button:hover{
+    background-color: #008C45;
+    color: #FDF5E6;
+    border: 3px solid #FDF5E6;
 }
 
 
-main {
-    grid-area mn;
-    background-color: cornflowerblue;
+
+
+main { 
+    grid-area: mn; 
+    background-color: #FDF5E6;
+    min-height: 400px; 
+    height: 100%; 
+    background-image: url('../img/mainBackgroundMobile.png'); 
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    text-align: center;
+    padding: 20px;
 }
 
-aside {
+.main-content {
+    background-color: #FDF5E6; 
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+}
+
+.main-content p {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+#main-button {
+    background-color: #FDF5E6;
+    color: black;
+    border: 3px solid #008C45;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.2s ease;
+}
+
+#main-button:hover {
+    background-color: #e7df10;
+}
+
+
+
+#aside-background {
     grid-area: as;
-    background-color: mediumblue;
+    background-color: #FDF5E6;
 }
+
+
+.aside { 
+    display: flex;
+    background-color: #f74049; 
+    border: 3px solid #cd212a;
+    margin: 10px;
+    border-radius: 15px;
+    flex-direction: column;
+    align-content: space-evenly;
+}
+
+.review-card {
+    background-color: #FDF5E6; 
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.review-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.review-card .stars {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.review-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
 
 footer {
     grid-area: ft;
-    background-color: indigo;
+    background-color: #cd212a;
+    color: #FDF5E6;
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.footer-logo img {
+    height: 70px; 
+    width: auto;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around; 
+    text-align: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #FDF5E6;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #FDF5E6;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(253, 245, 230, 0.3);
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/*Mobil*/
+@media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .menu-button { display: block; }
+
+    .fade-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        z-index: 150; 
+        display: none;
+        pointer-events: auto;
+    }
+
+    .fade-layer.visible {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 250px;
+        height: 100%;
+        background-color: #cd212a;
+        padding: 100px 20px;
+        transition: 0.4s;
+        z-index: 200; 
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+
+    .menu.show {
+        right: 0;
+    }
+    
+    .mobile-nav-button {
+        width: 100%;
+        font-size: 1.1rem; 
+    }
+
+    aside {
+        grid-area: as;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 20px;
+        background-color: #FDF5E6;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+}
+
+/*Desktop*/
+@media (min-width: 769px) {
+    .wrapper {
+        grid-template-columns: 1fr 20% 15%;
+        grid-template-rows: 100px 160px 1fr auto;
+        grid-template-areas: 
+            'hd hd hd'
+            'tp tp as'
+            'mn mn as'
+            'ft ft ft';
+    }
+    .desktop-nav { 
+        display: flex; 
+        gap: 25px; 
+    }
+
+    main {
+        
+        background-image: url('../img/mainBackgroundDesktop3.png'); 
+    }
+
+    aside {
+        grid-area: as;
+        grid-row: 2 / 4; 
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background-color: #00008b; 
+        overflow-y: auto; 
+    }
+    .menu { display: none; }
+    .fade-layer { display: none !important; }
 }
