@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Valentino</title>
+    <link rel="stylesheet" href="css/style-om-oss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" class="logo-link">
+                <img src="img/Logotyp.png" alt="Logotyp">
+            </a>
+            <nav class="desktop-nav">
+                <button class="nav-button" onclick="window.location.href='meny.html'">Meny</button>
+                <button class="nav-button" onclick="window.location.href='om-oss.html'">Om oss</button>
+                <button class="nav-button" onclick="window.location.href='boka-bord.html'">Boka Bord</button>
+            </nav>
+            <button class="menu-button">☰</button>
+        </header>
+
+        <main>
+            <section id="var-finns-vi" class="main-thirds">
+                <h1>Var finns vi?</h1>
+                <h2>Vägbeskrivning från E4:an</h2>
+                <ol>
+                    <li>Sväng av E4:an vid mot 60</li>
+                    <li>Åk mot riktningen Grönköping Centrum</li>
+                    <li>Följ Kungsvägen tills T-korsningen med Järnvägsgatan</li>
+                    <li>Pizzeria Valentino ligger mittemot Stationen</li>
+                </ol>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.3039860455005!2d15.145805777048383!3d58.32709299092499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46595679bb084931%3A0xf40f666b2a0957f8!2sValentino%20Mj%C3%B6lby!5e0!3m2!1ssv!2sse!4v1714640000000!5m2!1ssv!2sse" 
+                        width="100%" 
+                        height="320" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+            
+            <section id="om-oss" class="main-thirds">
+                <h1>Om oss</h1>
+                <h2>Valentino</h2>
+                <p>Sedan 1991 har vi på Valentino bakat utsökta pizzor med endast de bästa råvarorna och en stor portion kärlek. Vår filosofi är att en pizza är ett hantverk, och vi kompromissar aldrig med kvaliteten.</p>
+
+                <h2>Vår historia och syfte</h2>
+                <p>Allting började med Marco Rossi, som ville skapa en varm och välkomnande mötesplats där genuin italiensk matlagningskonst möter den lokala gemenskapen. Det är en tradition vi än idag förvaltar med stolthet.</p>
+
+                <h2>Enkelt och gott</h2>
+                <p>Hos oss får du en skön blandning av tradition, smak och bekvämlighet – enkelt och gott.</p>
+            </section>
+
+            <section id="vilka-ar-vi" class="main-thirds">
+                <h1>Vilka är vi?</h1>
+                <h2>Grundaren - Mannen med en idé</h2>
+                <div class="image-container">
+                    <img src="img/Marco-Rossi grundare.png" alt="Image of Marco Rossi">
+                </div>
+
+                <h2>Elnour - Den skickligaste pizzabagaren i Grönköping</h2>
+                <div class="image-container">
+                    <img src="img/Elnour -Pizzabagare.png" alt="Image of Elnour">
+                </div>
+
+                <h2>Kalle - Levererar din pizza i rekordtid</h2>
+                <div class="image-container">
+                    <img src="img/Anders-Pizzabud.png" alt="Image of Kalle">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-logo">
+                <img src="img/Logotyp.png" alt="Pizzeria Valentino Logotyp">
+            </div>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p>Storgatan 12, Grönköping</p>
+                    <p>Tel: 031-123 45</p>
+                    <p>E-post: info@valentino.se</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Länkar</h3>
+                    <a href="index.html">Hem</a>
+                    <a href="meny.html">Meny</a>
+                    <a href="om-oss.html">Om oss</a>
+                    <a href="boka-bord.html">Boka bord</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2026 Pizzeria Valentino AB. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="fade-layer"></div>
+    <nav class="menu">
+        <button class="mobile-nav-button" onclick="window.location.href='meny.html'">Meny</button>
+        <button class="mobile-nav-button" onclick="window.location.href='om-oss.html'">Om oss</button>
+        <button class="mobile-nav-button" onclick="window.location.href='boka-bord.html'">Boka bord</button>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

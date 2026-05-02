@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FDF5E6;
+}
+
+nav, .menu-button, .menu, .nav-button, .mobile-nav-button, header, footer, .reservation-card {
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr auto;
+    grid-template-areas: 
+        "hd"
+        "mn"
+        "ft";
+}
+
+header {
+    grid-area: hd;
+    height: 100px;
+    background-color: #cd212a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    z-index: 100;
+}
+
+header .logo-link img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.nav-button, .mobile-nav-button {
+    background-color: #FDF5E6;
+    color: black;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 12px 28px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .mobile-nav-button:hover {
+    background-color: #cd212a;
+    color: white;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+main {
+    grid-area: mn;
+    padding: 40px 20px;
+}
+
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reservation-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.reservation-card h1 {
+    font-size: 1.6rem;
+    color: #cd212a;
+}
+
+.info-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+}
+
+.info-row span {
+    font-size: 1.4rem;
+}
+
+.reserve-btn {
+    background-color: #cd212a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto;
+}
+
+.reserve-btn:hover {
+    background-color: #a7171f;
+    transform: scale(1.02);
+}
+
+/* Dölj hamburgermenyn och dess lager på desktop */
+.menu, .fade-layer {
+    display: none;
+}
+
+footer {
+    grid-area: ft;
+    background-color: #cd212a;
+    color: #FDF5E6;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-logo img {
+    height: 70px;
+    width: auto;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #FDF5E6;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: #FDF5E6;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-column a:hover {
+    opacity: 0.7;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(253, 245, 230, 0.3);
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* MOBIL */
+@media (max-width: 1024px) {
+    .reservation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .desktop-nav { display: none; }
+    .menu-button { display: block; }
+    
+    .reservation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fade-layer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        z-index: 150;
+        display: none;
+        pointer-events: auto;
+    }
+
+    .fade-layer.visible { display: block; }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 250px;
+        height: 100%;
+        background-color: #cd212a;
+        padding: 100px 20px;
+        transition: 0.4s;
+        z-index: 200;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+
+    .menu.show { right: 0; }
+    
+    .mobile-nav-button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
