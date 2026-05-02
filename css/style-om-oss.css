@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-nav, .menu-button, .menu, .nav-button, .mobile-nav-button, .top-section, .top-section button, main h1, main p, .item-card, .item-card button {
+nav, .menu-button, .menu, .nav-button, .mobile-nav-button, .top-section, .top-section button, main h1, main p, .item-card, .item-card button, p, h2 {
     font-family: 'Sorts Mill Goudy', serif;
 }
 
