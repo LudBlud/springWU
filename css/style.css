@@ -91,7 +91,7 @@ header .logo-link img {
 
 }
 
-.top-section h1 {
+.top-section h2 {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -229,6 +229,18 @@ footer {
     align-items: center;
     gap: 30px;
     font-family: 'Sorts Mill Goudy', serif;
+}
+
+.footer-container {
+    background-color: #cd212a;
+    color: #FDF5E6;
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Sorts Mill Goudy', serif;
+    
 }
 
 .footer-logo img {

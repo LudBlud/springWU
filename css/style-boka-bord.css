@@ -141,15 +141,28 @@ footer {
     grid-area: ft;
     background-color: #cd212a;
     color: #FDF5E6;
-    padding: 40px 20px;
+    padding: 40px 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.footer-container {
+    background-color: #cd212a;
+    color: #FDF5E6;
+    padding: 40px 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-family: 'Sorts Mill Goudy', serif;
+    
 }
 
 .footer-logo img {
-    height: 70px;
+    height: 70px; 
     width: auto;
 }
 
@@ -157,7 +170,7 @@ footer {
     width: 100%;
     max-width: 1000px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     text-align: center;
 }
 
